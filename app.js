@@ -1,5 +1,6 @@
 var get_ticket_list, 
     express = require('express'),
+    NodePie = require('nodepie'),
     app = express.createServer(),
     https = require('https');
 app.listen(3000); //Listen for connections on port 3000
@@ -18,20 +19,22 @@ get_ticket_list = function (req, res) {
     var datareq = https.request(options, function(datares) {
       console.log("statusCode: ", datares.statusCode);
       console.log("headers: ", datares.headers);
-      var _responseBody = "";
+      var rss = "";
       
       datares.on('data', function(d) {
-        res.write(d);
+        rss += d;
       });
       datares.on('end', function () {
-          res.end();
+          var output = new NodePie(rss);
+          output.init();
+          res.send(output.getTitle());
       });
     });
     datareq.end();
 
     datareq.on('error', function(e) {
       datares.send({error: e});
-    });    
+    });
 };
 
 app.get('/list_tickets', get_ticket_list);
