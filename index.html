@@ -60,7 +60,7 @@
     $(document).ready(function () {
         $.ajax({
             type    : "GET",
-            url     : "https://issues.jasig.org/sr/jira.issueviews:searchrequest-comments-rss/temp/SearchRequest.xml?jqlQuery=project+%3D+UP+ORDER+BY+updated+DESC%2C+key+DESC&tempMax=1000",
+            url     : "http://localhost:3000/list_tickets",
             error   : function (jqXHR, textStatus, errorThrown) {
                 console.log("error:" + errorThrown);
                 console.log("Status:" + textStatus);
