@@ -7,11 +7,8 @@ Hodge podge app to demonstrate:
 
 ## Requirements
 
- * Node.js and npm (Node Package Manager)
- * Express: npm install express
- * Nodepie: npm install nodepie
- * Mustache for Node: npm install mustache
-
+ * Node.js
+ * Google Chrome Web Browser
 
 ## Run the App
 
