@@ -87,7 +87,7 @@
                     $(".offline_indicator").css("-webkit-transform","translate(0,0)");
                     //See if there's a local version of the data
                     if (localStorage.getItem("tickets")) {
-                        // $("#main > .ticket_list").html(localStorage.getItem("tickets"));
+                        //Update the ticket UI with cached tickets
                         refresh_ticket_list(JSON.parse(localStorage.getItem("tickets")).items);
                     }
                     else {
@@ -96,7 +96,6 @@
                 },
                 success : function (data, textStatus, jqXHR) {
                     //Display the data
-                    // $("#main > .ticket_list").html(JSON.stringify(data));
                     refresh_ticket_list(data.items);
                     //Save the data to localStorage
                     localStorage.setItem("tickets", JSON.stringify(data));
@@ -107,24 +106,6 @@
 
     // start the application
     app.run('#/');
-
-    /*app.getTickets = function (page) {
-        $.ajax({
-            type    : "GET",
-            url     : "/list_tickets/" + page ? page : '',
-            error   : function (jqXHR, textStatus, errorThrown) {
-                console.log("error:" + errorThrown);
-                console.log("Status:" + textStatus);
-            },
-            success : function (data, textStatus, jqXHR) {
-                console.log("success");
-                console.log(data);
-            }
-        });
-    };
-    $(document).ready(function () {
-        app.getTickets();
-    });*/
   </script>
 
 
