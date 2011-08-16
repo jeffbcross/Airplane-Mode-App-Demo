@@ -1,0 +1,29 @@
+<h1>Airplane Mode Demo App</h1>
+Hodge podge app to demonstrate:
+<ul>
+<li>Node.js With Express</li>
+<li>HTML5 Application Cache and Local Storage</li>
+<li>CSS Transforms and Transitions</li>
+</ul>
+
+<h2>Requirements</h2>
+<ul>
+<li>Node.js and npm (Node Package Manager)</li>
+<li>Express: npm install express</li>
+<li>Nodepie: npm install nodepie</li>
+<li>Mustache for Node: npm install mustache</li>
+</ul>
+
+<h2>Run the App</h2>
+<pre>
+cd "Airplane Mode Demo"
+node app.js
+</pre>
+
+<h2>Test App Features</h2>
+<ol>
+<li>Open Chrome Web Browser (Other browsers not supported, although they easily could be)</li>
+<li>Visit http://localhost:3000 (Should load series of JIRA tickets from jasig.org)</li>
+<li>Shut down node app: (Ctrl+C in node shell)</li>
+<li>Refresh page, an indicator should say that cached data is being shown since service can't be reached.</li>
+</ol>
