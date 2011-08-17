@@ -10,8 +10,6 @@ js/libs/modernizr-1.7.min.js
 js/libs/jquery-1.5.1.min.js
 js/libs/jquery.tmpl.min.js
 js/libs/sammy-latest.min.js
-js/libs/mustache.js
-js/libs/sammy.mustache.js
 js/plugins.js
 js/script.js
 
